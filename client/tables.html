@@ -63,20 +63,6 @@
 
 </body>
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
-<script type="text/javascript">
+<script src="script.js"></script>
 
-	$.get("/api", function(data) {
-      for (var i = 0; i < data.length; i++) {
-        var wellSection = $("<div>");
-        wellSection.addClass("well");
-        wellSection.attr("id", "character-well-" + i);
-        $("#tableSection").append(wellSection);
-
-        $("#character-well-" + i).append("<h2>" + data[i].customerName + "</h2>");
-        $("#character-well-" + i).append("<h3>Role: " + data[i].phoneNumber + "</h4>");
-        $("#character-well-" + i).append("<h3>Age: " + data[i].customerEmail + "</h4>");
-        $("#character-well-" + i).append("<h3>Force Points: " + data[i].customerID + "</h4>");
-	  }
-    });
-</script>
 </html>
