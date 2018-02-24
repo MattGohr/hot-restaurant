@@ -33,19 +33,20 @@ var reservations = [{
 
 // Routes
 // =============================================================
+app.use('/', express.static(path.join(__dirname, "client")));
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "view.html"));
 });
 
-app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
-});
-
-app.get("/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "tables.html"));
-});
+// app.get("/reserve", function(req, res) {
+//   res.sendFile(path.join(__dirname, "reserve.html"));
+// });
+//
+// app.get("/tables", function(req, res) {
+//   res.sendFile(path.join(__dirname, "tables.html"));
+// });
 
 // Search for Specific Character (or all characters) - provides JSON
 // app.get("/api/:characters?", function (req, res) {

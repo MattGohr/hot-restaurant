@@ -1,3 +1,5 @@
+console.log('something');
+
   // QUESTION: What is this code doing?
   $("#search-btn").on("click", function() {
     var searchedCharacter = $("#character-search").val().trim();
