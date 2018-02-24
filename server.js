@@ -17,16 +17,16 @@ app.use(bodyParser.json());
 // =============================================================
 var reservations = [
     {
-        "customerName": "test 1",
-        "phoneNumber": "345-456-5555",
-        "customerEmail": "test@email.com",
-        "customerID": "123"
+        customerName: "test 1",
+        phoneNumber: "345-456-5555",
+        customerEmail: "test@email.com",
+        customerID: "123"
     },
     {
-        "customerName": "test 2",
-        "phoneNumber": "345-456-77777",
-        "customerEmail": "test@email.com",
-        "customerID": "333"
+        customerName: "test 2",
+        phoneNumber: "345-456-77777",
+        customerEmail: "test@email.com",
+        customerID: "333"
     }
 ];
 
@@ -46,9 +46,10 @@ app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 });
 
+
 // Search for Specific Character (or all characters) - provides JSON
-// app.get("/api/:characters?", function (req, res) {
-//     var chosen = req.params.characters;
+ app.get("/api/:reservations?", function (req, res) {
+    //var chosen = req.params.characters;
 
     /* if (chosen) {
         console.log(chosen);
@@ -60,9 +61,9 @@ app.get("/tables", function (req, res) {
         }
 
         return res.json(false);
-    }
-    return res.json(characters); */
-//});
+    }*/
+    return res.json(reservations);
+});
 
 // Create New Characters - takes in JSON input
 app.post("/api/new", function (req, res) {
