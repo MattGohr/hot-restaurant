@@ -1,0 +1,23 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "hot resteraunt app",
+  "main": "index.js",
+  "scripts": {
+    "test": "testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattGohr/hot-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattGohr/hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/MattGohr/hot-restaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
